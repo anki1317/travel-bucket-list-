@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(img/e3fa5585c9df83aa38b926c9a01d8866.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container {
+    width: 800px;
+    height: auto;
+    min-height: 400px;
+    padding: 30px;
+    background: transparent;
+    border: 2px solid #ff098ca1;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+h1 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .destination-input {
+    flex: 1;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    background-color: transparent;
+    border: 2px solid #ff00a2a1;
+    border-radius: 30px;
+    color: #000000;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .destination-input::placeholder {
+    color: #000000;
+  }
+  .add-button {
+    border: none;
+    outline: none;
+    background: #ffffffa1;
+    color: #e61ea0;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+  }   
+  .empty-image {
+    margin: 55px auto 0;
+    display: block;
+  }  
+  .destination {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9255ab;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    border: 2px solid #e6b7eca1;
+    transition: all 0.2s ease;
+  }
+  .destination:first-child {
+    margin-top: 0;
+  }
+  
+  .destination:last-child {
+    margin-bottom: 0;
+  }
+  .destination:hover {
+    background-color:#df1391a1;
+  }
+  .destination label {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+  }
+  .destination span {
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  span::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -30px;
+    border-radius: 100px;
+    border: 2px solid #000000a1;
+  }
+  input[type='checkbox'] {
+    visibility: hidden;
+  }
+  
+  input:checked + span {
+    text-decoration: line-through
+  }
+  
+  .destination:hover input:checked + span::before, input:checked + span::before {
+    background: url(./check.svg) 50% 50% no-repeat #09bb21;
+    border-color: #09bb21;
+  }
+  
+  .destination:hover span::before {
+    border-color: #eee;
+  }
+  
+  .destination .delete-btn  {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #eee;
+    font-size: 24px;
+  }
+  
+  .destination-container  {
+    height: 300px;
+    overflow: overlay;
+  }
+  
+  .destination-container::-webkit-scrollbar-track  {
+    background: rgb(0, 0, 0);
+    border-radius: 20px
+  }
+  
+  .destination-container::-webkit-scrollbar  {
+    width: 0;
+  }
+  
+  .destination-container:hover::-webkit-scrollbar  {
+    width: 7px;
+  }
+  
+  .destinations-container::-webkit-scrollbar-thumb  {
+    background: #a124a1;
+    border-radius: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .filter {
+    color: #d90a5d;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid #e6b7eca1;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .filter.active, .filter:hover {
+    background-color: #cb37b5a1;
+  }
+  
+  .delete-all {
+    display: flex;
+    color: #000000;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .delete-all:hover {
+    border-radius: 5px;
+    background-color: #000000a1;
+  }
+  
